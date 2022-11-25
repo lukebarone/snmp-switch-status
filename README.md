@@ -4,6 +4,8 @@ This project runs on Bash (with colours) to show you, via SNMP, what plugs are
 connected on your switch, along with whether they are running at gigabit
 speeds or lower.
 
+![screenshot.png](screenshot.png)
+
 ## Switch Setup
 
 Your switches must support SNMP v3 (untested with earlier non-encrypted
