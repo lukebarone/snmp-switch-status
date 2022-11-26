@@ -51,9 +51,9 @@ There are two files of note: `switches.conf` for each individual switch, and `.e
 
 ### .env
 
-USERNAME="UsernameGoesHere"
-AUTH_PASS="Authentication Password or Key"
-ENC_KEY="Privacy Password or Key"
+    USERNAME="UsernameGoesHere"
+    AUTH_PASS="Authentication Password or Key"
+    ENC_KEY="Privacy Password or Key"
 
 ### switches.conf
 
