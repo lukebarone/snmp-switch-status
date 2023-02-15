@@ -31,7 +31,7 @@ while IFS=' ' read -r ip auth priv low high name; do
         if [[ "${port}" == "2" ]]; then
             echo -en "${RED}o"
         else
-            if (( speed > 100000000 )); then
+            if (( speed > 100000000 )) || (( speed == 1000 )); then
                 color="${GREEN}"
             else
                 color="${YELLOW}"
