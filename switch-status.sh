@@ -27,6 +27,7 @@ while IFS=' ' read -r ip auth priv low high name; do
         1.3.6.1.2.1.2.2.1.5.\{"${low}".."${high}"\} | cut -f2 -d' '> $TMP_FILE.speed
 
     echo -en "${YELLOW}${SWITCH_NAME} "
+    COUNT=0
     while IFS=$'\t' read -r port speed; do
         if [[ "${port}" == "2" ]]; then
             echo -en "${RED}o"
@@ -37,8 +38,10 @@ while IFS=' ' read -r ip auth priv low high name; do
                 color="${YELLOW}"
             fi
             echo -en "${color}•"
+            ((COUNT=COUNT+1))
         fi
     done < <(paste "$TMP_FILE" "$TMP_FILE.speed")
+    echo -en "${YELLOW} ${COUNT} in use"
     echo -en "\n"
 done < switches.conf
 echo -e "${NC}"
